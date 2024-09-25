@@ -1,0 +1,50 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<div class="container">
+    <nav class="topnav">
+        <div class="title"><a href="#">{title}</a></div>
+        <div class="links-container">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Posts</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<style>
+	.topnav {
+        display: flex;
+        justify-content: space-between;
+
+        width: 100%;
+        border: 1px solid red;
+
+
+        .title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: white;
+        }
+
+        .links-container {
+            font-size: 1rem;
+            font-weight: 600;
+            color: white;
+        }
+
+        .links-container ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: space-around;
+            gap: 1em;
+        }
+    }
+</style>
